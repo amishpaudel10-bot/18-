@@ -1,0 +1,64 @@
+:root {
+    --box-bg: rgba(0, 0, 0, 0.8);
+    --text-color: #fff;
+    --accent: #ff69b4;
+}
+
+body, html { margin: 0; padding: 0; overflow: hidden; font-family: sans-serif; }
+
+/* 4. Day/Night Themes */
+.day-theme { background-color: #f0f0f0; }
+.night-theme { background-color: #1a1a2e; filter: brightness(0.7); }
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#background-layer {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.character-sprite {
+    height: 80%; /* Adjust based on art height */
+    transition: transform 0.3s ease; /* For animated scenes */
+}
+
+/* 2. Dialogue Box Design */
+#ui-layer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#dialogue-box {
+    width: 80%;
+    background: var(--box-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+}
+
+#choice-container {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.choice-btn {
+    background: var(--accent);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
