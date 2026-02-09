@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Novel Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="day-theme"> <div id="age-gate" class="overlay">
+        <div class="modal">
+            <h2>Age Verification</h2>
+            <p>You must be 18+ to enter. Please confirm your age.</p>
+            <button onclick="verifyAge()">I am 18 or older</button>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div id="background-layer" style="background-image: url('room.jpg');">
+            <img src="char-sprite.png" alt="Character" class="character-sprite">
+        </div>
+
+        <div id="stats-bar">
+            <div class="stat">Affection: <span id="affection-score">0</span></div>
+            <div class="stat">Trust: <span id="trust-score">0</span></div>
+        </div>
+
+        <div id="ui-layer">
+            <div id="dialogue-box">
+                <h3 id="character-name">Character Name</h3>
+                <p id="dialogue-text">Welcome to the story. What will you do next?</p>
+                
+                <div id="choice-container">
+                    <button class="choice-btn" onclick="makeChoice(1)">Be Kind</button>
+                    <button class="choice-btn" onclick="makeChoice(2)">Be Cold</button>
+                </div>
+            </div>
+        </div>
+
+        <nav id="game-menu">
+            <button>Save</button>
+            <button>Load</button>
+            <button>Settings</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
